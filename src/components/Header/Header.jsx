@@ -34,7 +34,8 @@ const Header = () => {
                     <div id="optionDropDown" onClick={() => setOpenOptions(!openOptions)}>
                         {option.Adult} adult &bull; {option.Children} children  &bull; {option.Room} room
                     </div>
-                    {openOptions && <GuestOptionsList option={option} setOption={setOption}/>}
+                    {openOptions &&
+                        <GuestOptionsList option={option} setOption={setOption} setOpenOptions={setOpenOptions}/>}
                     <span className="seperator"></span>
                 </div>
                 <div className="headerSearchItem">
